@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网页</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            margin-top: 60px; /* 调整以适应固定header */
+            flex: 1;
+        }
+        aside {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            height: calc(100vh - 60px);
+            overflow-y: auto;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin-bottom: 10px;
+        }
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        aside ul li a:hover {
+            color: #007bff;
+        }
+        main {
+            margin-left: 200px;
+            padding: 20px;
+            flex: 1;
+            box-sizing: border-box;
+        }
+        section {
+            margin-bottom: 50px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        section h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#services">服务</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <aside>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#services">服务</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="home">
+                <h2>首页</h2>
+                <p>欢迎来到我的网页！这是首页内容。</p>
+            </section>
+            <section id="about">
+                <h2>关于</h2>
+                <p>这里是关于我们的信息。</p>
+            </section>
+            <section id="services">
+                <h2>服务</h2>
+                <p>我们提供以下服务...</p>
+            </section>
+            <section id="contact">
+                <h2>联系</h2>
+                <p>联系我们：email@example.com</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
